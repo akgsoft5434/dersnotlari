@@ -677,10 +677,30 @@ void main() {
     3.14: [1, 2, 3],     // double anahtar, List değer
   };
 
-  print(karisikMap);
+  print(karisikMap); // {isim: Ali, 1: 100, true: Doğru mu?, 3.14: [1, 2, 3]}
+
 }
 
 ```
+###🔹 Örnek Kullanım
+
+Dynamic Map, farklı tiplerde veri saklaman gerektiğinde veya JSON verilerini map olarak tutarken çok kullanışlıdır:
+
+```dart
+void main() {
+  Map<dynamic, dynamic> kullanici = {
+    'id': 1,
+    'isim': 'Ali',
+    'yas': 25,
+    'aktif': true,
+    'roller': ['admin', 'kullanici']
+  };
+
+  print(kullanici); // {id: 1, isim: Ali, yas: 25, aktif: true, roller: [admin, kullanici]}
+
+}
+```
+
 
 ## 🔹 2. Map’e Eleman Ekleme ve Güncelleme
 ```dart
