@@ -532,16 +532,17 @@ void main() {
 }
 ```
 ## 🔹 5. Set Özellikleri
-Özellik / Metot	Açıklama
-.length	Eleman sayısını verir
-.isEmpty / .isNotEmpty	Boşluk kontrolü
-.contains(x)	x elemanı var mı?
-.add(x) / .addAll()	Eleman ekler
-.remove(x)	Eleman siler
-.clear()	Tüm elemanları siler
-.union(Set)	İki Set’i birleştirir
-.intersection(Set)	Ortak elemanları alır
-.difference(Set)	Farklı elemanları alır
+| Özellik / Metot            | Açıklama               |
+| -------------------------- | ---------------------- |
+| `.length`                  | Eleman sayısını verir  |
+| `.isEmpty` / `.isNotEmpty` | Boşluk kontrolü        |
+| `.contains(x)`             | x elemanı var mı?      |
+| `.add(x)` / `.addAll()`    | Eleman ekler           |
+| `.remove(x)`               | Eleman siler           |
+| `.clear()`                 | Tüm elemanları siler   |
+| `.union(Set)`              | İki Set’i birleştirir  |
+| `.intersection(Set)`       | Ortak elemanları alır  |
+| `.difference(Set)`         | Farklı elemanları alır |
 
 
 ## 🔹 6. Set Döngüyle Gezme
