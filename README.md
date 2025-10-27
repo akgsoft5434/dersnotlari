@@ -263,7 +263,7 @@ void main() {
 }
 ```
 
- # 📚 Özet Tablo
+ 📚 Özet Tablo
 
 | Metot / Özellik | Açıklama                  |
 | --------------- | ------------------------- |
@@ -291,91 +291,91 @@ Aşağıda en sık kullanılan metotların açıklamaları ve örnekleri yer al�
  ## 🔹 first
 
 Listenin ilk elemanını döndürür.
-
+```dart
 void main() {
   List<String> meyveler = ['Elma', 'Armut', 'Muz'];
   print(meyveler.first); // Çıktı: Elma
 }
-
+```
 ## 🔹 last
 
 Listenin son elemanını döndürür.
-
+```dart
 void main() {
   List<String> meyveler = ['Elma', 'Armut', 'Muz'];
   print(meyveler.last); // Çıktı: Muz
 }
-
+```
 ## 🔹 isEmpty ve isNotEmpty
 
 Listenin boş olup olmadığını kontrol eder.
-
+```dart
 void main() {
   List<int> sayilar = [];
   print(sayilar.isEmpty);    // true (liste boş)
   print(sayilar.isNotEmpty); // false (liste dolu değil)
 }
-
+```
 ## 🔹 length
 
 Listenin eleman sayısını döndürür.
-
+```dart
 void main() {
   List<String> renkler = ['Kırmızı', 'Yeşil', 'Mavi'];
   print(renkler.length); // Çıktı: 3
 }
-
+```
 ## 🔹 reversed
 
 Listenin ters çevrilmiş bir Iterable halini döndürür.
 Listeye çevirmek için toList() kullanılır.
-
+```dart
 void main() {
   List<int> sayilar = [1, 2, 3, 4];
   print(sayilar.reversed.toList()); // Çıktı: [4, 3, 2, 1]
 }
-
+```
 ## 🔹 contains()
 
 Liste içinde belirtilen değerin olup olmadığını kontrol eder.
-
+```dart
 void main() {
   List<String> meyveler = ['Elma', 'Muz', 'Armut'];
   print(meyveler.contains('Muz'));   // true
   print(meyveler.contains('Karpuz')); // false
 }
-
+```
 ## 🔹 indexOf()
 
 Bir elemanın listedeki indeksini döndürür.
 Bulamazsa -1 döner.
-
+```dart
 void main() {
   List<String> renkler = ['Kırmızı', 'Yeşil', 'Mavi'];
   print(renkler.indexOf('Yeşil')); // 1
   print(renkler.indexOf('Mor'));   // -1
 }
-
+```
 ## 🔹 add()
 
 Listeye tek bir eleman ekler.
-
+```dart
 void main() {
   List<int> sayilar = [1, 2, 3];
   sayilar.add(4);
   print(sayilar); // [1, 2, 3, 4]
 }
-
+```
 ## 🔹 addAll()
 
 Listeye birden fazla eleman (başka bir liste) ekler.
-
+```dart
 void main() {
   List<int> sayilar = [1, 2];
   sayilar.addAll([3, 4, 5]);
   print(sayilar); // [1, 2, 3, 4, 5]
 }
-
+``` 
 ## 🔹 remove()
 
 Listeden belirtilen değeri siler.
