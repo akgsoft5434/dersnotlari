@@ -380,92 +380,92 @@ void main() {
 
 Listeden belirtilen değeri siler.
 Eğer değer birden fazla varsa, ilk gördüğünü siler.
-
+```dart
 void main() {
   List<String> meyveler = ['Elma', 'Muz', 'Elma'];
   meyveler.remove('Elma');
   print(meyveler); // [Muz, Elma]
 }
-
+```
 ## 🔹 removeAt()
 
 Belirtilen indeksteki elemanı siler.
-
+```dart
 void main() {
   List<String> renkler = ['Kırmızı', 'Yeşil', 'Mavi'];
   renkler.removeAt(1);
   print(renkler); // [Kırmızı, Mavi]
 }
-
+```
 ## 🔹 clear()
 
 Listeyi tamamen boşaltır.
-
+```dart
 void main() {
   List<int> sayilar = [10, 20, 30];
   sayilar.clear();
   print(sayilar); // []
 }
-
+```
 ## 🔹 join()
 
 Listedeki elemanları birleştirir ve araya belirtilen karakteri ekler.
-
+```dart
 void main() {
   List<String> kelimeler = ['Merhaba', 'Dart', 'Dünyası'];
   print(kelimeler.join(' ')); // Merhaba Dart Dünyası
 }
-
+```
 ## 🔹 sort()
 
 Listeyi küçükten büyüğe (alfabetik ya da sayısal) sıralar.
-
+```dart
 void main() {
   List<int> sayilar = [5, 3, 8, 1];
   sayilar.sort();
   print(sayilar); // [1, 3, 5, 8]
 }
-
+```
 ## 🔹 any() ve every()
 
 Koşula göre herhangi bir veya tüm elemanların durumu kontrol edilir.
-
+```dart
 void main() {
   List<int> sayilar = [1, 2, 3, 4];
 
   print(sayilar.any((sayi) => sayi > 3));   // true (en az biri 3'ten büyük)
   print(sayilar.every((sayi) => sayi > 0)); // true (hepsi 0'dan büyük)
 }
-
+```
 ## 🔹 map() ve forEach()
 
 Listedeki her eleman üzerinde işlem yapar.
-
+```dart
 void main() {
   List<int> sayilar = [1, 2, 3];
   var kareler = sayilar.map((sayi) => sayi * sayi).toList();
   print(kareler); // [1, 4, 9]
 }
-
+```
 ## 🔹 where()
 
 Belirli bir şarta uyan elemanları filtreler.
-
+```dart
 void main() {
   List<int> sayilar = [10, 15, 20, 25];
   var sonuc = sayilar.where((sayi) => sayi > 15).toList();
   print(sonuc); // [20, 25]
 }
-
+```
 ## 🔹 sublist()
 
 Listenin belirli bir alt kısmını (dilimini) alır.
-
+```dart
 void main() {
   List<String> renkler = ['Kırmızı', 'Yeşil', 'Mavi', 'Sarı'];
   print(renkler.sublist(1, 3)); // [Yeşil, Mavi]
 }
-
+```
 
 
 # 📗 Dart’ta Set Yapısı
@@ -473,40 +473,43 @@ void main() {
 Dart’ta Set, eşsiz (unique) elemanlardan oluşan koleksiyon yapısıdır.
 Listelerden farkı, bir Set’in aynı elemanı birden fazla kez tutmamasıdır.
 
-🔹 1. Set Nedir?
+## 🔹 1. Set Nedir?
 
 Tanım: Eşsiz elemanlardan oluşan bir koleksiyon.
 
 Sıralama: Dart’ta standart Set sıralı değildir.
 
 Eleman tekrarını engeller.
-
+```dart
 void main() {
   Set<String> meyveler = {'Elma', 'Armut', 'Muz', 'Elma'};
   print(meyveler); // Çıktı: {Elma, Armut, Muz}
 }
-
+```
 
 Elma sadece bir kez eklenir.
 
-🔹 2. Set Oluşturma Yöntemleri
+## 🔹 2. Set Oluşturma Yöntemleri
 a) Doğrudan Küme İşaretleriyle
+
+```dart
 void main() {
   Set<int> sayilar = {1, 2, 3};
   print(sayilar); // {1, 2, 3}
 }
-
+```
 b) Boş Set Oluşturma
 
 Boş {} ifadesi Map olarak kabul edilir. Boş Set için Set<T>() kullanılır.
-
+```dart
 void main() {
   Set<String> bosSet = Set();
   bosSet.add('Yeni Eleman');
   print(bosSet); // {Yeni Eleman}
 }
-
-🔹 3. Set’e Eleman Ekleme
+```
+## 🔹 3. Set’e Eleman Ekleme
+```dart
 void main() {
   Set<int> sayilar = {1, 2};
   
@@ -515,8 +518,9 @@ void main() {
 
   print(sayilar); // {1, 2, 3, 4, 5}
 }
-
-🔹 4. Set’ten Eleman Silme
+```
+## 🔹 4. Set’ten Eleman Silme
+```dart
 void main() {
   Set<String> meyveler = {'Elma', 'Armut', 'Muz'};
 
@@ -526,8 +530,8 @@ void main() {
   meyveler.clear();
   print(meyveler); // {}
 }
-
-🔹 5. Set Özellikleri
+```
+## 🔹 5. Set Özellikleri
 Özellik / Metot	Açıklama
 .length	Eleman sayısını verir
 .isEmpty / .isNotEmpty	Boşluk kontrolü
@@ -538,21 +542,27 @@ void main() {
 .union(Set)	İki Set’i birleştirir
 .intersection(Set)	Ortak elemanları alır
 .difference(Set)	Farklı elemanları alır
-🔹 6. Set Döngüyle Gezme
+
+
+## 🔹 6. Set Döngüyle Gezme
+```dart
 void main() {
   Set<String> renkler = {'Kırmızı', 'Yeşil', 'Mavi'};
-
+```
   // For-in ile
+```dart
   for (var renk in renkler) {
     print(renk);
   }
-
+```
   // forEach ile
+```dart
   renkler.forEach((renk) => print(renk));
 }
-
-🔹 7. Set İşlemleri
+```
+## 🔹 7. Set İşlemleri
 a) Birleştirme (union)
+```dart
 void main() {
   Set<int> a = {1, 2, 3};
   Set<int> b = {3, 4, 5};
@@ -560,8 +570,9 @@ void main() {
   var birlesik = a.union(b);
   print(birlesik); // {1, 2, 3, 4, 5}
 }
-
+```
 b) Kesişim (intersection)
+```dart
 void main() {
   Set<int> a = {1, 2, 3};
   Set<int> b = {2, 3, 4};
@@ -569,8 +580,9 @@ void main() {
   var ortak = a.intersection(b);
   print(ortak); // {2, 3}
 }
-
+```
 c) Fark (difference)
+```dart
 void main() {
   Set<int> a = {1, 2, 3};
   Set<int> b = {2, 3, 4};
@@ -578,40 +590,43 @@ void main() {
   var fark = a.difference(b);
   print(fark); // {1}
 }
-
-🔹 8. Set ve List Dönüşümleri
+```
+## 🔹 8. Set ve List Dönüşümleri
 Set → List
+```dart
 void main() {
   Set<int> sayilar = {1, 2, 3};
   List<int> liste = sayilar.toList();
   print(liste); // [1, 2, 3]
 }
-
+```
 List → Set
+```dart
 void main() {
   List<int> liste = [1, 2, 2, 3, 3];
   Set<int> set = liste.toSet();
   print(set); // {1, 2, 3}
 }
-
-🔹 9. Set ile Null-Safe Kullanım
+```
+## 🔹 9. Set ile Null-Safe Kullanım
+```dart
 void main() {
   Set<int>? sayilar;
   var bosSet = {...?sayilar, 1, 2}; 
   print(bosSet); // {1, 2}
 }
-
-🔹 10. Örnek Kullanım Senaryoları
+```
+## 🔹 10. Örnek Kullanım Senaryoları
 
 Eşsiz değerler (ID, isim, e-posta) saklamak için.
 
 Tekrarlayan verileri temizlemek için.
 
 Kesişim, fark ve birleşim işlemleri gerektiren durumlar.
-
+```dart
 void main() {
   List<int> tumSayilar = [1, 2, 2, 3, 4, 4, 5];
   Set<int> benzersiz = tumSayilar.toSet();
   print(benzersiz); // {1, 2, 3, 4, 5}
 }
-
+```
