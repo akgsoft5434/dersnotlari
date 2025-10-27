@@ -682,7 +682,7 @@ void main() {
 }
 
 ```
-###🔹 Örnek Kullanım
+🔹 Örnek Kullanım
 
 Dynamic Map, farklı tiplerde veri saklaman gerektiğinde veya JSON verilerini map olarak tutarken çok kullanışlıdır:
 
@@ -697,7 +697,8 @@ void main() {
   };
 
   print(kullanici); // {id: 1, isim: Ali, yas: 25, aktif: true, roller: [admin, kullanici]}
-
+  print(kullanici['isim']); // Ali
+  print(kullanici[1]);      // 100
 }
 ```
 
