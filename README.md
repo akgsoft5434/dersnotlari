@@ -665,6 +665,23 @@ void main() {
   print(sozluk); // {Dart: Programlama Dili}
 }
 ```
+
+### c) Dynamic Map Oluşturma
+```dart
+void main() {
+  // dynamic tipli Map
+  Map<dynamic, dynamic> karisikMap = {
+    'isim': 'Ali',       // String anahtar, String değer
+    1: 100,              // int anahtar, int değer
+    true: 'Doğru mu?',   // bool anahtar, String değer
+    3.14: [1, 2, 3],     // double anahtar, List değer
+  };
+
+  print(karisikMap);
+}
+
+```
+
 ## 🔹 2. Map’e Eleman Ekleme ve Güncelleme
 ```dart
 void main() {
