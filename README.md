@@ -53,6 +53,8 @@ void main() {
   List<String> bosListe = [];
   bosListe.add('Yeni Eleman');
   print(bosListe); // [Yeni Eleman]
+
+  List<int> bosListe2 = List.empty(growable: true); // sonradan eleman eklenebilir
 }
 ```
 `add()` metodu, listeye yeni bir eleman ekler.
